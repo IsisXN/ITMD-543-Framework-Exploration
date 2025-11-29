@@ -9,17 +9,21 @@ import photo6 from "../assets/images/Media (8).jpg";
 
 export default function Photography() {
   const photos = [
-    { src: photo1, title: "Media (10)" },
-    { src: photo2, title: "Media (5)" },
-    { src: photo3, title: "Media (7)" },
-    { src: photo4, title: "Media (9)" },
-    { src: photo5, title: "Media (6)" },
-    { src: photo6, title: "Media (8)" },
+    { src: photo1, title: "China - Great wall" },
+    { src: photo2, title: "Spain - Sagrada Família" },
+    { src: photo3, title: "Italy - Lake como" },
+    { src: photo4, title: "Italy - Duomo di Milano" },
+    { src: photo5, title: "Italy - Milan" },
+    { src: photo6, title: "Italy - Como villa" },
   ];
 
   return (
     <div className="page photography-page">
       <h1>Photography</h1>
+      <p className="page-description">
+        This page showcases photography from my summer travels to Spain, Italy, and China.
+        Here you can see some of the places I visited and the moments I captured.
+      </p>
       <div className="gallery">
         {photos.map((p, index) => (
           <div className="gallery-item" key={index}>
