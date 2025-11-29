@@ -1,27 +1,47 @@
-import { Routes, Route, Link } from "react-router-dom"
-import Home from "./pages/Home"
-import Photography from "./pages/Photography"
-import About from "./pages/About"
-import "./App.css"
+// src/App.jsx
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Photography from "./pages/Photography";
+import "./App.css";
 
-export default function App() {
+function App() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   return (
-    <div>
+    <Router>
+      <header>
+        <nav className="navbar">
+          <Link to="/" className="logo">MyPortfolio</Link>
+          <ul className="nav-links">
+            <li><Link to="/">Home</Link></li>
+            <li
+              className="dropdown"
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
+            >
+              <span>More</span>
+              {dropdownOpen && (
+                <ul className="dropdown-menu">
+                  <li><Link to="/photography">Photography</Link></li>
+                  <li><Link to="/about">About Me</Link></li>
+                </ul>
+              )}
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-      {/* Navigation */}
-      <nav className="navbar">
-        <Link to="/">Home</Link>
-        <Link to="/photography">Photography</Link>
-        <Link to="/about">About</Link>
-      </nav>
-
-      {/* Routing */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/photography" element={<Photography />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-
-    </div>
-  )
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/photography" element={<Photography />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </main>
+    </Router>
+  );
 }
+
+export default App;
