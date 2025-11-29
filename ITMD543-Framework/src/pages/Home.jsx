@@ -1,18 +1,23 @@
 // src/pages/Home.jsx
 import React from "react";
+import placeholderPhoto from "../assets/images/placeholder.jpg"; // replace with your photo
 
 export default function Home() {
   return (
     <div className="page">
-      <h1>Welcome to My Portfolio</h1>
-      <p>This project showcases my exploration of React with Vite. The goal was to create a small functional portfolio website with multiple pages, routing, and styling.</p>
-      <p>Challenges I faced included figuring out React Router, setting up CSS properly, and learning how to display images with hover effects. Some things didn’t work at first, like importing Bootstrap before installing it.</p>
-      
-      <div className="home-photo">
-        {/* Placeholder for your photo */}
+      <h1>Welcome</h1>
+      <p className="page-description">
+        Hello! This site showcases my project using React and Vite. You can view my photography
+        from trips this summer, learn more about me, and see examples of my work. I faced some
+        challenges along the way, but I learned a lot about setting up React, routing, and styling.
+      </p>
+      <div style={{textAlign: "center", marginTop: "30px"}}>
+        <img
+          src={placeholderPhoto}
+          alt="Placeholder"
+          style={{ maxWidth: "300px", borderRadius: "10px" }}
+        />
       </div>
-
-      <p>Overall, this assignment helped me understand how to structure a React project and implement navigation and styling for a clean, modern website.</p>
     </div>
   );
 }
