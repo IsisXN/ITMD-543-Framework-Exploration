@@ -18,12 +18,11 @@ export default function Photography() {
   ];
 
   return (
-    <div className="page">
+    <div className="page photography-page">
       <h1>Photography</h1>
       <div className="gallery">
         {photos.map((p, index) => (
           <div className="gallery-item" key={index}>
-            {/* Image with hover scale effect */}
             <img src={p.src} alt={p.title} />
             <h3>{p.title}</h3>
           </div>
