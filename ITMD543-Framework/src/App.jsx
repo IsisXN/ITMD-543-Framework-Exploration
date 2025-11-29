@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -7,8 +7,6 @@ import Photography from "./pages/Photography";
 import "./App.css";
 
 function App() {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
   return (
     <Router>
       <header>
@@ -16,19 +14,8 @@ function App() {
           <Link to="/" className="logo">MyPortfolio</Link>
           <ul className="nav-links">
             <li><Link to="/">Home</Link></li>
-            <li
-              className="dropdown"
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={() => setDropdownOpen(false)}
-            >
-              <span>More</span>
-              {dropdownOpen && (
-                <ul className="dropdown-menu">
-                  <li><Link to="/photography">Photography</Link></li>
-                  <li><Link to="/about">About Me</Link></li>
-                </ul>
-              )}
-            </li>
+            <li><Link to="/photography">Photography</Link></li>
+            <li><Link to="/about">About Me</Link></li>
           </ul>
         </nav>
       </header>
