@@ -5,17 +5,13 @@ export default function About() {
   return (
     <div className="page">
       <h1>About Me</h1>
-      <p>My name is Isis N and I'm currently pursuing a bachelors and masters in ITM. I enjoy working on projects that combine creativity with problem-solving, like this portfolio project.</p>
-      
-      <h2>Resume Snapshot</h2>
-      <ul>
-        <li>Experience with React, Vite, and front-end web development</li>
-        <li>Leadership roles in student organizations (ALPFA, SHPE, Photography Club)</li>
-        <li>Strong interest in developing intuitive and visually appealing web interfaces</li>
-      </ul>
-
-      <div className="resume-placeholder">
-        Resume PDF Placeholder
+      <p className="page-description">
+        I am a student exploring modern web frameworks and technologies. This project is part of
+        my learning journey to understand React, routing, and deploying web applications. I enjoy
+        coding and building projects that are both functional and visually appealing.
+      </p>
+      <div style={{ textAlign: "center", marginTop: "30px" }}>
+        <p>My Resume: <a href="#" style={{ color: "#4aa3ff" }}>Download PDF</a></p>
       </div>
     </div>
   );
