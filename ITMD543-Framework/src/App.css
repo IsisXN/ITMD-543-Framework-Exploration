@@ -1,62 +1,116 @@
-/* Overall page background */
-.photography-page {
+/* --- Global site styles --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
   background-color: #0a1a2f; /* dark navy */
-  color: #ffffff; /* default text color */
+  color: #ffffff;
+}
+
+/* Navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #0d244f;
+}
+
+.navbar-logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #4aa3ff; /* light blue button hover */
+  color: #0a1a2f;
+}
+
+/* Page container */
+.page {
   padding: 40px;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
 }
 
-/* Header */
-.photography-page h1 {
+/* Page headings */
+.page h1 {
   text-align: center;
-  color: #4aa3ff; /* light blue accent */
-  margin-bottom: 30px;
+  color: #4aa3ff;
+  margin-bottom: 20px;
 }
 
-/* Gallery grid: 2 columns, 3 rows */
+/* Paragraph description box */
+.page-description {
+  background-color: #1b2a4a; /* slightly lighter navy */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+/* --- Photography Page --- */
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
-/* Individual gallery item */
 .gallery-item {
-  background-color: #1b2a4a; /* slightly lighter navy for background */
-  padding: 15px;
+  background-color: #1b2a4a;
+  padding: 10px;
   border-radius: 15px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 
-/* Image styling */
 .gallery-item img {
   width: 100%;
   border-radius: 10px;
+  display: block;
   transition: transform 0.3s ease;
 }
 
-/* Hover effect */
+/* Hover effect without covering caption */
 .gallery-item:hover img {
   transform: scale(1.05);
 }
 
-.gallery-item:hover {
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
-}
-
-/* Title under each photo */
 .gallery-item h3 {
-  color: #ffffff;
   margin-top: 10px;
+  color: #4aa3ff;
   font-weight: bold;
 }
 
-/* Responsive: single column on smaller screens */
+/* Responsive design */
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: 1fr;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar-links {
+    justify-content: center;
   }
 }
