@@ -1,6 +1,6 @@
 // src/pages/Home.jsx
 import React from "react";
-import placeholderPhoto from "../assets/images/placeholder.jpg"; // replace with your photo
+import placeholderPhoto from "../assets/images/Media (9).jpg"; // replace with your photo
 
 export default function Home() {
   return (
@@ -13,8 +13,8 @@ export default function Home() {
       </p>
       <div style={{textAlign: "center", marginTop: "30px"}}>
         <img
-          src={placeholderPhoto}
-          alt="Placeholder"
+          src={Media (9).jpg}
+          alt="Me"
           style={{ maxWidth: "300px", borderRadius: "10px" }}
         />
       </div>
