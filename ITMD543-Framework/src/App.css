@@ -37,7 +37,7 @@ body {
 }
 
 .navbar-links a:hover {
-  background-color: #4aa3ff; /* light blue button hover */
+  background-color: #4aa3ff;
   color: #0a1a2f;
 }
 
