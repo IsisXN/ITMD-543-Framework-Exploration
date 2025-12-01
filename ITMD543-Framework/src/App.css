@@ -1,24 +1,27 @@
-/* --- Global site styles --- */
+/* Global site styles */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #0a1a2f; /* dark navy */
+  background-color: #0a1a2f; /* dark navy background for entire site */
   color: #ffffff;
 }
 
-/* Navbar */
+/* --- Navbar --- */
 .navbar-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 40px;
-  background-color: #0d244f;
+  background-color: #0d244f; /* darker navy */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-logo {
-  font-weight: bold;
   font-size: 1.5rem;
+  font-weight: bold;
   color: #ffffff;
 }
 
@@ -31,19 +34,19 @@ body {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 16px;
+  padding: 8px 15px;
   border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .navbar-links a:hover {
-  background-color: #4aa3ff;
+  background-color: #4aa3ff; /* light blue hover */
   color: #0a1a2f;
 }
 
-/* Page container */
+/* --- Page container --- */
 .page {
-  padding: 40px;
+  padding: 40px 20px;
   min-height: 100vh;
 }
 
@@ -59,26 +62,55 @@ body {
   background-color: #1b2a4a; /* slightly lighter navy */
   padding: 20px;
   border-radius: 10px;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto 40px auto;
   text-align: center;
   line-height: 1.5;
   color: #ffffff;
 }
 
-/* --- Photography Page --- */
+/* --- Home Page photo placeholder --- */
+.home-photo {
+  background-color: #1b2a4a;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4aa3ff;
+  font-weight: bold;
+}
+
+/* --- Resume placeholder --- */
+.Resume {
+  background-color: #1b2a4a;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* --- Photography Gallery --- */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2x3 grid */
   gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .gallery-item {
-  background-color: #1b2a4a;
+  background-color: #1b2a4a; /* box behind image */
   padding: 10px;
   border-radius: 15px;
   overflow: hidden;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .gallery-item img {
@@ -88,7 +120,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Hover effect without covering caption */
 .gallery-item:hover img {
   transform: scale(1.05);
 }
@@ -97,20 +128,17 @@ body {
   margin-top: 10px;
   color: #4aa3ff;
   font-weight: bold;
+  z-index: 1;
+  position: relative;
 }
 
-/* Responsive design */
+/* --- Responsive: single column on smaller screens --- */
 @media (max-width: 768px) {
   .gallery {
     grid-template-columns: 1fr;
   }
 
-  .navbar-container {
-    flex-direction: column;
-    gap: 15px;
-  }
-
   .navbar-links {
-    justify-content: center;
+    gap: 15px;
   }
 }
