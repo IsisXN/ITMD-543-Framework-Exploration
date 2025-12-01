@@ -3,18 +3,18 @@ import React from "react";
 import photo1 from "../assets/images/Media (10).jpg";
 import photo2 from "../assets/images/Media (5).jpg";
 import photo3 from "../assets/images/Media (7).jpg";
-import photo4 from "../assets/images/Media (9).jpg";
+import photo4 from "../assets/images/Media (11).jpg";
 import photo5 from "../assets/images/Media (6).jpg";
 import photo6 from "../assets/images/Media (8).jpg";
 
 export default function Photography() {
   const photos = [
-    { src: photo1, title: "China - Great wall" },
+    { src: photo1, title: "China - Great Wall" },
     { src: photo2, title: "Spain - Sagrada Família" },
-    { src: photo3, title: "Italy - Lake como" },
-    { src: photo4, title: "Italy - Duomo di Milano" },
+    { src: photo3, title: "Italy - Lake Como" },
+    { src: photo4, title: "China - Forbidden City" },
     { src: photo5, title: "Italy - Milan" },
-    { src: photo6, title: "Italy - Como villa" },
+    { src: photo6, title: "Italy - Como Villa" },
   ];
 
   return (
